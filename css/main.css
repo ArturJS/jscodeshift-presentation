@@ -38,8 +38,8 @@
 }
 
 .embeeded-iframe {
-    width: 110vw;
-    height: 110vh;
+    width: 95vw;
+    height: 95vh;
     max-width: none !important;
     max-height: none !important;
     position: fixed;
