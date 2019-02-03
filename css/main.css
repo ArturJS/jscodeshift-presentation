@@ -15,3 +15,24 @@
     top: -220px;
     width: max-content;
 }
+
+.title-small {
+    text-transform: lowercase !important;
+}
+
+.title-small:not(.top).current-fragment {
+    display: block;
+    text-transform: lowercase !important;
+}
+
+.title-small:not(.top):not(.current-fragment) {
+    display: none;
+}
+
+.title-small.top {
+    transform: translateY(0);
+}
+
+.title-small.top.visible {
+    transform: translateY(-150%);
+}
