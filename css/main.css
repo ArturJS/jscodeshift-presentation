@@ -1,0 +1,17 @@
+.reveal .slides section.slide2 .fragment.arrow-down {
+    border: 0;
+    box-shadow: none;
+    background: transparent;
+    width: 20vw;
+    transform: scaleY(0.8) scaleX(-1) rotate(-52deg);
+}
+
+.slide2 {
+    text-align: left;
+}
+
+.slide2 .solution {
+    position: relative;
+    top: -220px;
+    width: max-content;
+}

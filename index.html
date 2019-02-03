@@ -14,7 +14,7 @@
 
         <!-- Theme used for syntax highlighting of code -->
         <link rel="stylesheet" href="lib/css/zenburn.css" />
-
+        <link rel="stylesheet" href="css/main.css" />
         <!-- Printing and PDF exports -->
         <script>
             var link = document.createElement('link');
@@ -58,16 +58,46 @@
                         </li>
                     </ol>
                 </section>
-                <section>
-                    <pre>
-						<code data-trim data-noescape>
-								(def lazy-fib
-								  (concat
-								   [0 1]
-								   <mark>((fn rfib [a b]</mark>
-										(lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-						</code>
-					</pre>
+                <section class="slide2">
+                    <pre class="fragment" data-fragment-index="1"><!--
+					 --><code
+							data-trim
+							data-noescape
+						>
+							const React = require('react');
+						</code><!--
+				--></pre>
+                    <img
+                        class="fragment arrow-down"
+                        data-fragment-index="2"
+                        src="css/images/arrow-down.png"
+                    />
+                    <pre class="fragment" data-fragment-index="3"><!--
+					 --><code
+							data-trim
+							data-noescape
+						>
+							import React from 'react';
+						</code><!--
+				--></pre>
+
+                    <pre class="fragment solution" data-fragment-index="4"><!--
+					 --><code
+							data-trim
+							data-noescape
+						>
+							/const (\w+) = require\('([^']+')\);/
+						</code><!--
+				--></pre>
+
+                    <pre class="fragment solution" data-fragment-index="5"><!--
+					 --><code
+							data-trim
+							data-noescape
+						>
+							import $1 from '$2';
+						</code><!--
+				--></pre>
                 </section>
             </div>
         </div>
