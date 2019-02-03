@@ -36,3 +36,14 @@
 .title-small.top.visible {
     transform: translateY(-150%);
 }
+
+.embeeded-iframe {
+    width: 110vw;
+    height: 110vh;
+    max-width: none !important;
+    max-height: none !important;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
