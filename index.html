@@ -370,16 +370,29 @@ const obj = {
                     </ol>
                 </section>
                 <section>
-                    <h4>ToDo: problem and solution1</h4>
-                </section>
-                <section>
-                    <h4>ToDo: problem and solution2</h4>
+                    <img src="css/images/demos/5.png" />
+                    <pre class="fragment fit-content"><!--
+                    --><code
+                           data-trim
+                           data-noescape
+                       >
+                           grep -rL "export" ./*
+                       </code><!--
+                --></pre>
+                    <pre class="fragment fit-content"><!--
+                    --><code
+                           data-trim
+                           data-noescape
+                       >
+                           find . -type f -exec wc -l {} + | sort -rn
+                       </code><!--
+                --></pre>
                 </section>
                 <section>
                     <h4>FAQ:</h4>
-                    <ol>
+                    <ol class="font28">
                         <li class="fragment">
-                            Возможно ли использовать jscodeshift вместо babel?
+                            Нужно ли использовать jscodeshift вместо babel?
                         </li>
                         <li class="fragment">
                             Можно ли использовать этот инструмент для
