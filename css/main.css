@@ -50,18 +50,17 @@
     max-height: none;
 }
 
-.slide-example0 img {
-    transform: scale(1.2);
-}
-
 .slide-example1 .img-wrapper {
     display: flex;
     position: relative;
 }
 
 .slide-example1 img:first-child {
-    margin-left: -145px;
     margin-right: 10px;
+}
+
+.slide-example1 img {
+    zoom: 0.7;
 }
 
 .slide-example1 .fragment {
