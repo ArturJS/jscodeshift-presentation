@@ -37,11 +37,6 @@
     transform: translateY(-150%);
 }
 
-.slide-ast-explorer1 .row {
-    display: flex;
-    justify-content: space-between;
-}
-
 .slide-ast-explorer1 pre {
     min-width: 405px;
 }
@@ -74,4 +69,25 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.fit-content {
+    width: fit-content !important;
+}
+
+.reveal pre code {
+    max-height: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.font14 {
+    font-size: 14px !important;
+}
+
+.font13 {
+    font-size: 13px !important;
 }

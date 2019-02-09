@@ -229,6 +229,124 @@
 };</code><!--
                                 --></pre>
                 </section>
+                <section class="slide-ast-explorer3">
+                    <div class="row">
+                        <div class="fragment">
+                            <pre class="fit-content"><code>
+const obj = {
+    'weird-property': 123
+};
+        </code></pre>
+                        </div>
+                        <div class="fragment">
+                            <pre class="fit-content"><code>
+{
+    "program": {
+      "type": "Program",
+      "body": [
+        // ...
+      ],
+      "sourceType": "script"
+      "tokens": [
+        // ...
+      ]
+    },
+    "name": null
+    "type": "File",
+    "comments": null
+}
+</code></pre>
+                        </div>
+                    </div>
+                </section>
+                <section class="slide-ast-explorer4">
+                    <div class="row">
+                        <div class="fragment">
+                            <pre class="fit-content font14"><code>
+"body": [
+      {
+        "type": "VariableDeclaration",
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "id": {
+              "type": "Identifier",
+              "name": "obj"
+            },
+            "init": {
+              "type": "ObjectExpression",
+              "properties": [
+                {
+                  "type": "Property",
+                  "key": {
+                    "type": "Literal",
+                    "value": "weird-property",
+                    "raw": "'weird-property'"
+                  },
+                  "computed": false,
+                  "value": {
+                    "type": "Literal",
+                    "value": 123,
+                    "raw": "123"
+                  },
+                  "kind": "init",
+                  "method": false,
+                  "shorthand": false
+                }
+              ]
+            }
+          }
+        ],
+        "kind": "const"
+      }
+]
+                </code></pre>
+                        </div>
+                        <div class="fragment">
+                            <pre class="fit-content font13"><code>
+"tokens": [
+      {
+        "type": "Keyword",
+        "value": "const"
+      },
+      {
+        "type": "Identifier",
+        "value": "obj"
+      },
+      {
+        "type": "Punctuator",
+        "value": "="
+      },
+      {
+        "type": "Punctuator",
+        "value": "{"
+      },
+      {
+        "type": "String",
+        "value": "'weird-property'"
+      },
+      {
+        "type": "Punctuator",
+        "value": ":"
+      },
+      {
+        "type": "Numeric",
+        "value": "123"
+      },
+      {
+        "type": "Punctuator",
+        "value": "}"
+      },
+      {
+        "type": "Punctuator",
+        "value": ";"
+      }
+    ]
+  }
+        </code></pre>
+                        </div>
+                    </div>
+                </section>
                 <section class="slide-example0">
                     <img src="css/images/demos/3.png" />
                 </section>
