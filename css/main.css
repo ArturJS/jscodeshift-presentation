@@ -37,6 +37,24 @@
     transform: translateY(-150%);
 }
 
+.slide-ast-explorer1 .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide-ast-explorer1 pre {
+    min-width: 405px;
+}
+
+.slide-ast-explorer2 pre {
+    font-size: 16px;
+    width: fit-content;
+}
+
+.slide-ast-explorer2 pre code {
+    max-height: none;
+}
+
 .slide-example0 img {
     transform: scale(1.2);
 }

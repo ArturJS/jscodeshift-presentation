@@ -53,9 +53,6 @@
                         <li class="fragment">
                             FAQ
                         </li>
-                        <li class="fragment">
-                            Выводы.
-                        </li>
                     </ol>
                 </section>
                 <section class="slide2">
@@ -148,8 +145,89 @@
                         поиска и подмены исходного кода.
                     </p>
                 </section>
-                <section>
-                    ToDo astexplorer.net
+                <section class="slide-ast-explorer1">
+                    <div class="row">
+                        <div class="fragment">
+                            <span>
+                                Before
+                            </span>
+                            <pre><!--
+                                    --><code
+                                           data-trim
+                                           data-noescape
+                                       >
+                                       const str1 = 'getA';
+                                       const str2 = 'PlusB';
+                                       const obj = {
+                                         'a': 1,
+                                         'b': 2,
+                                         'weird-property': 123,
+                                         [`${str1}${str2}`]() {
+                                             return this.a + this.b;
+                                         }
+                                       };
+                                       </code><!--
+                                --></pre>
+                        </div>
+
+                        <div class="fragment">
+                            <span>
+                                After
+                            </span>
+                            <pre><!--
+                                    --><code
+                                           data-trim
+                                           data-noescape
+                                       >
+                                       const str1 = 'getA';
+                                       const str2 = 'PlusB';
+                                       const obj = {
+                                         a: 1,
+                                         b: 2,
+                                         'weird-property': 123,
+                                         [`${str1}${str2}`]() {
+                                             return this.a + this.b;
+                                         }
+                                       };
+                                       </code><!--
+                               --></pre>
+                        </div>
+                    </div>
+                </section>
+                <section class="slide-ast-explorer2">
+                    <pre><!--
+                    --><code>module.exports = (file, api, options) => {
+    const j = api.jscodeshift;
+    const root = j(file.source);
+    const isValidIdentifierNameForProperty = (name) => {
+      if (/^0[xbo]?\d+$/.test(name)) {
+        return false;
+      }
+      
+      try {
+        new Function(`({${name}: 1})`)();
+      } catch (e) {
+        return false;
+      }
+    
+      return true;
+    };
+    
+    root
+      .find(j.Property, {
+        method: false,
+        computed: false,
+      })
+      .filter(p => (
+        p.value.key.type === 'Literal' &&
+        typeof p.value.key.value === 'string' &&
+        isValidIdentifierNameForProperty(p.value.key.value)
+      ))
+      .forEach(p => p.value.key = j.identifier(p.value.key.value));
+    
+    return root.toSource({quote: 'single'});
+};</code><!--
+                                --></pre>
                 </section>
                 <section class="slide-example0">
                     <img src="css/images/demos/3.png" />
@@ -196,7 +274,7 @@
                             https://github.com/benjamn/recast/issues/424
                             https://www.npmjs.com/package/ast-types
                         </li>
-                        <li>
+                        <li class="fragment">
                             jscodeshift/recast alternatives?
                         </li>
                     </ol>
