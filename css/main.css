@@ -1,4 +1,4 @@
-.reveal .slides section.slide2 .fragment.arrow-down {
+.reveal .slides section.slide2 .arrow-down {
     border: 0;
     box-shadow: none;
     background: transparent;
@@ -18,23 +18,6 @@
 
 .title-small {
     text-transform: lowercase !important;
-}
-
-.title-small:not(.top).current-fragment {
-    display: block;
-    text-transform: lowercase !important;
-}
-
-.title-small:not(.top):not(.current-fragment) {
-    display: none;
-}
-
-.title-small.top {
-    transform: translateY(0);
-}
-
-.title-small.top.visible {
-    transform: translateY(-150%);
 }
 
 .slide-ast-explorer1 pre {

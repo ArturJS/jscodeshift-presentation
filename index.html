@@ -64,11 +64,8 @@
 							const React = require('react');
 						</code><!--
 				--></pre>
-                    <img
-                        class="fragment arrow-down"
-                        src="css/images/arrow-down.png"
-                    />
-                    <pre class="fragment"><!--
+                    <img class="arrow-down" src="css/images/arrow-down.png" />
+                    <pre><!--
 					 --><code
 							data-trim
 							data-noescape
@@ -77,7 +74,7 @@
 						</code><!--
 				--></pre>
 
-                    <pre class="fragment solution"><!--
+                    <pre class="fragment solution" data-fragment-index="0"><!--
 					 --><code
 							data-trim
 							data-noescape
@@ -86,7 +83,7 @@
 						</code><!--
 				--></pre>
 
-                    <pre class="fragment solution"><!--
+                    <pre class="fragment solution" data-fragment-index="0"><!--
 					 --><code
 							data-trim
 							data-noescape
@@ -96,7 +93,7 @@
 				--></pre>
                 </section>
                 <section>
-                    <div class="fragment">
+                    <div>
                         <span>
                             AMD
                         </span>
@@ -146,14 +143,11 @@
                     </p>
                 </section>
                 <section>
-                    <h2 class="title-small fragment">
-                        jscodeshift
-                    </h2>
-                    <h2 class="title-small top fragment">
+                    <h2 class="title-small">
                         jscodeshift
                     </h2>
                     <p class="fragment">
-                        обёртка над recast для запуска codemods.
+                        Обёртка над recast для запуска codemods.
                     </p>
                     <p class="fragment">
                         Recast в свою очередь предоставляет API для перемещения,
@@ -162,7 +156,7 @@
                 </section>
                 <section class="slide-ast-explorer1">
                     <div class="row">
-                        <div class="fragment">
+                        <div>
                             <span>
                                 Before
                             </span>
@@ -185,7 +179,7 @@
                                 --></pre>
                         </div>
 
-                        <div class="fragment">
+                        <div>
                             <span>
                                 After
                             </span>
@@ -246,14 +240,14 @@
                 </section>
                 <section class="slide-ast-explorer3">
                     <div class="row">
-                        <div class="fragment">
+                        <div>
                             <pre class="fit-content"><code>
 const obj = {
     'weird-property': 123
 };
         </code></pre>
                         </div>
-                        <div class="fragment">
+                        <div>
                             <pre class="fit-content"><code>
 {
     "program": {
@@ -276,7 +270,7 @@ const obj = {
                 </section>
                 <section class="slide-ast-explorer4">
                     <div class="row">
-                        <div class="fragment">
+                        <div>
                             <pre class="fit-content font14"><code>
 "body": [
       {
@@ -317,7 +311,7 @@ const obj = {
 ]
                 </code></pre>
                         </div>
-                        <div class="fragment">
+                        <div>
                             <pre class="fit-content font13"><code>
 "tokens": [
       {
@@ -386,7 +380,10 @@ const obj = {
                 </section>
                 <section>
                     <img src="css/images/demos/5.png" />
-                    <pre class="fragment fit-content"><!--
+                    <pre
+                        class="fragment fit-content"
+                        data-fragment-index="0"
+                    ><!--
                     --><code
                            data-trim
                            data-noescape
@@ -394,7 +391,10 @@ const obj = {
                            grep -rL "export" ./*
                        </code><!--
                 --></pre>
-                    <pre class="fragment fit-content"><!--
+                    <pre
+                        class="fragment fit-content"
+                        data-fragment-index="0"
+                    ><!--
                     --><code
                            data-trim
                            data-noescape
